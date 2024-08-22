@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        /* Estilizando o modal */
+        .modal {
+            display: none; /* Modal fica oculto por padrão */
+            position: fixed; /* Fixa o modal na tela */
+            z-index: 1; /* Garante que o modal fique sobre outros elementos */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Permite rolagem se o conteúdo for grande */
+            background-color: rgba(0,0,0,0.4); /* Fundo com opacidade */
+        }
+
+        /* Conteúdo do modal */
+        .modal-content {
+            color: #ffffff;
+            background-color: #000000;
+            margin: 0 auto; /* Centraliza o modal verticalmente */
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #ffffff;
+            width: 80%; /* Largura do modal */
+            max-width: 500px; /* Largura máxima */
+        }
+
+        /* Botão de fechar */
+        .close {
+            color: #ffffff;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        img{
+            display: flex;
+            margin: 0 auto;
+            width: 280px;
+            height: 190px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão para abrir o modal -->
+    <button id="openModalBtn">Terra</button>
+
+    
+
+    <!-- Estrutura do Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="https://static.significados.com.br/foto/terra-planeta.jpg">
+            <h2>Terra</h2>
+            <p>  A Terra é composta principalmente de hidrogênio, oxigênio, silício e ferro, e possui uma estrutura com crosta (camada externa), manto (intermediária semi-sólida) e núcleo (líquido externo e sólido interno). Seu diâmetro é de cerca de 12.742 km e a massa é 5,97 x 10^24 kg, com uma gravidade na superfície de 9,8 m/s².
+
+               <br> Geograficamente, o planeta possui sete continentes e cinco oceanos, e sua crosta é dividida em placas tectônicas que causam terremotos e vulcões. A atmosfera tem várias camadas, incluindo a troposfera (onde ocorrem os fenômenos meteorológicos) e a estratosfera (que contém a camada de ozônio). O clima varia de tropical a polar.
+                
+                <br>  A Terra cobre 71% de água, com a maior parte nos oceanos e uma pequena fração em água doce. Possui diversos recursos naturais, incluindo minérios e fontes de energia. A diversidade biológica inclui uma ampla gama de organismos e ecossistemas.
+                
+                <br>  O ciclo da água envolve evaporação, condensação, precipitação e escoamento. A Terra está na zona habitável do Sistema Solar, com um campo magnético que a protege da radiação solar. A rotação ocorre a cerca de 1.670 km/h no equador, e a órbita ao redor do Sol é a 29,8 km/s.</p>
+        </div>
+
+    </div>
+
+        <!-- Botão para abrir o modal -->
+        <button id="openModalBtn">Mercúrio</button>
+
+        <!-- Estrutura do Modal -->
+        <div id="myModal" class="modal">
+    
+            <!-- Conteúdo do Modal -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Mercúrio</h2>
+                <p>Mercúrio, o planeta mais próximo do Sol, tem uma atmosfera muito fina composta de oxigênio, sódio, hidrogênio, hélio e potássio. Sua superfície é coberta por rochas e ferro, com muitas crateras e planícies. O núcleo é grande e metálico, feito de ferro e níquel.
+
+                    Com um diâmetro de cerca de 4.880 km e uma gravidade de 3,7 m/s², Mercúrio experimenta temperaturas extremas, variando de 430°C durante o dia a -180°C à noite devido à sua atmosfera quase inexistente. O planeta tem um período de rotação de 58,6 dias terrestres e um dia solar de 176 dias terrestres. Ele orbita o Sol a cada 88 dias terrestres.
+                    
+                    Mercúrio foi estudado por missões como Mariner 10 e MESSENGER, e a missão BepiColombo está a caminho para explorar mais sobre o planeta. Destaca-se por seu núcleo grande e variações extremas de temperatura entre o dia e a noite.</p>
+            </div>
+    
+        </div>
+
+    <script>
+        // Obtém os elementos
+        const modal = document.getElementById("myModal");
+        const btn = document.getElementById("openModalBtn");
+        const span = document.getElementsByClassName("close")[0];
+
+        // Quando o usuário clica no botão, abre o modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Quando o usuário clica no "x", fecha o modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Quando o usuário clica fora do modal, também fecha
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
